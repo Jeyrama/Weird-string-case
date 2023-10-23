@@ -36,3 +36,5 @@ function toWeirdCase(string) {
   }
   return str;
 }
+
+// or
