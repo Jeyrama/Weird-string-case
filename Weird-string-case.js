@@ -17,3 +17,22 @@ Examples:
 
 
 // Solution
+
+function toWeirdCase(string) {
+  let str = '';
+  let counter = 0;
+
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === ' ') {
+      str += ' ';
+      counter = 0;
+    } else if (counter % 2 === 0) {
+      str += string[i].toUpperCase();
+      counter++;
+    } else if (counter % 2 !== 0) {
+      str += string[i].toLowerCase();
+      counter++;
+    }
+  }
+  return str;
+}
